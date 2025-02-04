@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Guidance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center text-primary">Find Your Ideal Career</h2>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Enter your top skills (comma-separated):</label>
+                    <input type="text" name="skills" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Enter your interests:</label>
+                    <input type="text" name="interests" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Preferred Work Environment (remote, office, etc.):</label>
+                    <input type="text" name="work_environment" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Highest Education Level:</label>
+                    <input type="text" name="education" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Get Career Suggestions</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Suggestions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h2 class="text-center text-success">Your Career Recommendations</h2>
+            {% for career, score in careers %}
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ career }} (Match Score: {{ score }})</h3>
+                        <ul>
+                            <li><strong>Required Skills:</strong> {{ ", ".join(career_data[career]["skills"]) }}</li>
+                            <li><strong>Interests:</strong> {{ ", ".join(career_data[career]["interests"]) }}</li>
+                            <li><strong>Work Environment:</strong> {{ ", ".join(career_data[career]["work_environment"]) }}</li>
+                            <li><strong>Education Path:</strong> {{ ", ".join(career_data[career]["education"]) }}</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="text-center mt-3">
+                <a href="/" class="btn btn-outline-primary">Try Again</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
