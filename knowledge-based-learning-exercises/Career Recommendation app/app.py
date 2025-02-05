@@ -10,30 +10,103 @@ app = Flask(__name__)
 #Career has key features such as skills, interests, work environment and education
 career_data = {
     "Software Engineer": {
-        "skills": ["programming", "problem-solving", "logical thinking"],
-        "interests": ["technology", "software development"],
+        "skills": ["programming", "problem-solving", "algorithms", "debugging"],
+        "interests": ["technology", "coding", "software development", "AI"],
         "work_environment": ["remote", "office"],
-        "education": ["self-taught", "bachelor's", "certification"]
-    },
-    "Doctor": {
-        "skills": ["critical thinking", "empathy", "medical knowledge"],
-        "interests": ["healthcare", "helping people"],
-        "work_environment": ["hospital", "clinic"],
-        "education": ["medical degree"]
-    },
-    "Graphic Designer": {
-        "skills": ["creativity", "visual design", "Adobe Photoshop"],
-        "interests": ["art", "design"],
-        "work_environment": ["freelance", "office"],
-        "education": ["self-taught", "bachelor's", "certification"]
+        "education": ["Computer Science", "Software Engineering"]
     },
     "Data Scientist": {
-        "skills": ["statistics", "machine learning", "data analysis"],
-        "interests": ["technology", "AI"],
+        "skills": ["statistics", "machine learning", "Python", "data visualization"],
+        "interests": ["data analysis", "AI", "predictive modeling", "big data"],
         "work_environment": ["remote", "office"],
-        "education": ["bachelor's", "master's"]
+        "education": ["Mathematics", "Data Science", "Statistics"]
+    },
+    "Graphic Designer": {
+        "skills": ["creativity", "Adobe Photoshop", "visual design", "illustration"],
+        "interests": ["art", "branding", "advertising", "UI/UX design"],
+        "work_environment": ["freelance", "office"],
+        "education": ["Graphic Design", "Fine Arts", "Visual Communication"]
+    },
+    "Mechanical Engineer": {
+        "skills": ["engineering", "design", "problem-solving", "CAD"],
+        "interests": ["machines", "mechanics", "innovation", "product design"],
+        "work_environment": ["office", "field"],
+        "education": ["Mechanical Engineering"]
+    },
+    "Cybersecurity Analyst": {
+        "skills": ["network security", "penetration testing", "ethical hacking", "risk assessment"],
+        "interests": ["cybersecurity", "ethical hacking", "forensics"],
+        "work_environment": ["remote", "office"],
+        "education": ["Cybersecurity", "Computer Science", "IT"]
+    },
+    "Doctor": {
+        "skills": ["patient care", "diagnostics", "surgery", "medical knowledge"],
+        "interests": ["medicine", "helping people", "biology", "healthcare"],
+        "work_environment": ["hospital", "clinic"],
+        "education": ["Medicine", "Biology"]
+    },
+    "Lawyer": {
+        "skills": ["legal research", "public speaking", "critical thinking", "writing"],
+        "interests": ["law", "justice", "debating", "advocacy"],
+        "work_environment": ["courtroom", "office"],
+        "education": ["Law"]
+    },
+    "Teacher": {
+        "skills": ["communication", "lesson planning", "mentorship", "classroom management"],
+        "interests": ["education", "mentoring", "helping others"],
+        "work_environment": ["school", "online"],
+        "education": ["Education", "Teaching"]
+    },
+    "Civil Engineer": {
+        "skills": ["structural design", "project management", "mathematics"],
+        "interests": ["construction", "architecture", "urban planning"],
+        "work_environment": ["field", "office"],
+        "education": ["Civil Engineering"]
+    },
+    "Marketing Specialist": {
+        "skills": ["SEO", "content creation", "advertising", "social media"],
+        "interests": ["marketing", "branding", "advertising"],
+        "work_environment": ["office", "remote"],
+        "education": ["Marketing", "Business"]
+    },
+    "Psychologist": {
+        "skills": ["counseling", "empathy", "research", "mental health assessment"],
+        "interests": ["mental health", "human behavior", "therapy"],
+        "work_environment": ["clinic", "hospital"],
+        "education": ["Psychology"]
+    },
+    "Accountant": {
+        "skills": ["financial analysis", "bookkeeping", "taxation", "problem-solving"],
+        "interests": ["finance", "business", "money management"],
+        "work_environment": ["office", "remote"],
+        "education": ["Accounting", "Finance"]
+    },
+    "Entrepreneur": {
+        "skills": ["business strategy", "leadership", "risk-taking", "sales"],
+        "interests": ["business", "startups", "innovation"],
+        "work_environment": ["varies"],
+        "education": ["Business", "Self-taught"]
+    },
+    "Architect": {
+        "skills": ["design", "3D modeling", "urban planning", "problem-solving"],
+        "interests": ["architecture", "construction", "sustainability"],
+        "work_environment": ["office", "field"],
+        "education": ["Architecture"]
+    },
+    "Game Developer": {
+        "skills": ["game design", "3D modeling", "programming", "creativity"],
+        "interests": ["gaming", "animation", "AI"],
+        "work_environment": ["office", "remote"],
+        "education": ["Game Development", "Computer Science"]
+    },
+    "Biologist": {
+        "skills": ["research", "lab work", "data analysis", "biology"],
+        "interests": ["nature", "science", "ecosystems"],
+        "work_environment": ["lab", "field"],
+        "education": ["Biology", "Environmental Science"]
     }
 }
+
 
 # Function to match careers based on user input
 def match_careers(user_data):
