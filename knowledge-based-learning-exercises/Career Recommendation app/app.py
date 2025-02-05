@@ -7,8 +7,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Define the knowledge base - store career data
-#Career has key features such as skills, interests, work environment and education
-career_data = {
+#career_data has key features such as skills, interests, work environment and education
+career_data = { 
     "Software Engineer": {
         "skills": ["programming", "problem-solving", "algorithms", "debugging"],
         "interests": ["technology", "coding", "software development", "AI"],
@@ -107,7 +107,7 @@ career_data = {
     }
 }
 
-
+#Inference engine
 # Function to match careers based on user input
 def match_careers(user_data):
     career_scores = {}
@@ -136,6 +136,7 @@ def match_careers(user_data):
     
     return sorted_careers
 
+# Route for home page for the Flask app
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
